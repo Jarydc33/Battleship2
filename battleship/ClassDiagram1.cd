@@ -3,26 +3,26 @@
   <Class Name="battleship.Game">
     <Position X="8.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAECA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Player1" />
-      <Property Name="Player2" />
-      <Property Name="UI" />
+      <Field Name="Player1" />
+      <Field Name="Player2" />
+      <Field Name="UI" />
     </ShowAsAssociation>
   </Class>
   <Class Name="battleship.Player">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAEAAAABAkAAAAIAAAAAAQAIAAEAAAAAAAAAIA=</HashCode>
+      <HashCode>ABAAAgAAAAAAAAkAAAAIAAAAAAQAIAAEAAAAAAAQAIA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Submarine" />
-      <Property Name="Carrier" />
-      <Property Name="Destroyer" />
-      <Property Name="Battleship" />
+      <Field Name="Submarine" />
+      <Field Name="Carrier" />
+      <Field Name="Destroyer" />
+      <Field Name="Battleship" />
     </ShowAsAssociation>
   </Class>
   <Class Name="battleship.UI">

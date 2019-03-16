@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace battleshipTest
 {
     [TestClass]
-    public class UnitTest1
+    public class GameTest
     {
         [TestMethod]
         public void TestMethod1()
