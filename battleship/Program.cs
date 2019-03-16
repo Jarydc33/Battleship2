@@ -10,6 +10,7 @@ namespace battleship
     {
         static void Main(string[] args)
         {
+            Game Game = new Game();
         }
     }
 }

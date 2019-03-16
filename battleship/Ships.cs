@@ -5,8 +5,15 @@ using System.Text;
 
 namespace battleship
 {
-    public abstract class Ships
+    public class Ships
     {
-        private int size;
+        public int size;
+        public string shipName;
+
+        public Ships(int Size, string ShipName)
+        {
+            size = Size;
+            shipName = ShipName;
+        }
     }
 }

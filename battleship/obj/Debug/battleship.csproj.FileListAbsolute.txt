@@ -1,0 +1,7 @@
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\obj\Debug\battleship.csprojAssemblyReference.cache
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\obj\Debug\battleship.csproj.CoreCompileInputs.cache
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\bin\Debug\battleship.exe.config
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\bin\Debug\battleship.exe
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\bin\Debug\battleship.pdb
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\obj\Debug\battleship.exe
+C:\Users\Jaryd\Desktop\battleship\Battleship2\battleship\obj\Debug\battleship.pdb
