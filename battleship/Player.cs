@@ -11,6 +11,8 @@ namespace battleship
         private int score;
         private string[,] opponentBoard;
         private string name;
+        public string[] shipPlacement;
+        public int[] intShipPlacement;
         public string Name
         {
             get => name;
@@ -51,29 +53,37 @@ namespace battleship
             myBoard = new string[20, 20];
             opponentBoard = new string[20, 20];
             myShips = new List<Ships>();
-            myShips.Add(new Ships(2, "Destroyer"));
-            myShips.Add(new Ships(3, "Submarine"));
-            myShips.Add(new Ships(4, "Battleship"));
-            myShips.Add(new Ships(5, "Carrier"));
+            myShips.Add(new Ships(2, "Destroyer", "D"));
+            myShips.Add(new Ships(3, "Submarine", "S"));
+            myShips.Add(new Ships(4, "Battleship", "B"));
+            myShips.Add(new Ships(5, "Carrier","C"));
 
         }
 
         
-        public void PlacePieces()
+        public void AskForPlacement()
         {
-
-            string[] userInput = new string[2];
-            string[] placement = new string[8];
-            for (int i = 0, j = 0; i < 4; i++)
-            {
-                UI.PlaceGameBoard(MyBoard);
+            UI.PlaceGameBoard(MyBoard);
+            string[] userInput = new string[8];
+            shipPlacement = new string[4];
+            intShipPlacement = new int[8];
+            for (int i = 0, j = 1; i < 4; i++)
+            {                
                 userInput = UI.PlacePiece(myShips[i], name);
-                placement[j] = userInput[0];
-                placement[j + 1] = userInput[1];
-                j += 2;
+                shipPlacement[i] = userInput[0];
+                intShipPlacement[j] = int.Parse(userInput[1]);
+                intShipPlacement[j] -= 1;
+                j+=2;
             }
+        }
 
-
+        public void PlacePieces(Dictionary<string, int> dictionary)
+        {
+            for (int i = 0, j = 1; i < 8; i+=2)
+            {
+                MyBoard[intShipPlacement[i], intShipPlacement[j]] = "X";
+                j+=2;
+            }
         }
     }
 

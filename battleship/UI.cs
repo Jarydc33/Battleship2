@@ -32,11 +32,12 @@ namespace battleship
 
         public static string[] PlacePiece(Ships placeShip, string name)
         {
-            string[] placement = new string[4];
+            string[] placement = new string[8];
             Console.WriteLine("{0}, please enter the X coordinate for your {1}" ,name, placeShip.shipName);
             placement[0] = Console.ReadLine();
             Console.WriteLine("{0}, please enter the Y coordinate for your {1}", name, placeShip.shipName);
             placement[1] = Console.ReadLine();
+            placement[0].ToUpper();
 
             //Console.WriteLine("Horizontal or vertical?");
             //placement[1] = Console.ReadLine();
