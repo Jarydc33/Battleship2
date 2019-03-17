@@ -39,10 +39,13 @@ namespace battleship
             placement[1] = Console.ReadLine();
             placement[0].ToUpper();
 
-            //Console.WriteLine("Horizontal or vertical?");
-            //placement[1] = Console.ReadLine();
-
             return placement;
+        }
+
+        public static string OrientationChecker()
+        {
+            Console.WriteLine("Horizontal or vertical?");
+            return Console.ReadLine();
         }
     }
 }

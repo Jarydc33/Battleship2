@@ -49,6 +49,26 @@ namespace battleship
             Console.ReadLine();
         }
 
+        //public void OrientationChecker()
+        //{
+        //    string orientation = UI.OrientationChecker();
+
+        //    switch (orientation)
+        //    {
+        //        case "horizontal":
+
+        //            break;
+
+        //        case "vertical":
+
+        //            break;
+
+        //        default:
+        //            OrientationChecker();
+        //            break;
+        //    }
+        //}
+
         public void Translator()
         {
             int counter = 0;

@@ -75,14 +75,20 @@ namespace battleship
                 intShipPlacement[j] -= 1;
                 j+=2;
             }
+            
         }
 
         public void PlacePieces(Dictionary<string, int> dictionary)
         {
-            for (int i = 0, j = 1; i < 8; i+=2)
+            for (int i = 0, j = 1, l = 0; i < 8; i+=2)
             {
-                MyBoard[intShipPlacement[i], intShipPlacement[j]] = "X";
-                j+=2;
+                for (int k = 0; k < myShips[l].size; k++)
+                {
+                    MyBoard[intShipPlacement[i], intShipPlacement[j]+k] = "X";
+                                     
+                }
+                l++;
+                j += 2;
             }
         }
     }
