@@ -45,29 +45,9 @@ namespace battleship
             Player2.AskForPlacement();
             Translator();
             Player2.PlacePieces(gameDictionary);
-            UI.PlaceGameBoard(Player1.MyBoard);
+            UI.PlaceGameBoard(Player2.MyBoard);
             Console.ReadLine();
         }
-
-        //public void OrientationChecker()
-        //{
-        //    string orientation = UI.OrientationChecker();
-
-        //    switch (orientation)
-        //    {
-        //        case "horizontal":
-
-        //            break;
-
-        //        case "vertical":
-
-        //            break;
-
-        //        default:
-        //            OrientationChecker();
-        //            break;
-        //    }
-        //}
 
         public void Translator()
         {

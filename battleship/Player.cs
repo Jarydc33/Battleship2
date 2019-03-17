@@ -45,6 +45,7 @@ namespace battleship
                 score = value;
             }
         }
+        string[] orientation;
         List<Ships> myShips;
 
         public Player()
@@ -65,6 +66,7 @@ namespace battleship
         {
             UI.PlaceGameBoard(MyBoard);
             string[] userInput = new string[8];
+            orientation = new string[4];
             shipPlacement = new string[4];
             intShipPlacement = new int[8];
             for (int i = 0, j = 1; i < 4; i++)
@@ -74,6 +76,7 @@ namespace battleship
                 intShipPlacement[j] = int.Parse(userInput[1]);
                 intShipPlacement[j] -= 1;
                 j+=2;
+                orientation[i] = UI.OrientationChecker();
             }
             
         }
@@ -84,8 +87,20 @@ namespace battleship
             {
                 for (int k = 0; k < myShips[l].size; k++)
                 {
-                    MyBoard[intShipPlacement[i], intShipPlacement[j]+k] = "X";
-                                     
+                    switch (orientation[l])
+                    {
+                        case "horizontal":
+                            MyBoard[intShipPlacement[i], intShipPlacement[j] + k] = "X";
+                            break;
+
+                        case "vertical":
+                            MyBoard[intShipPlacement[i] + k, intShipPlacement[j]] = "X";
+                            break;
+
+                        default:
+
+                            break;
+                    }                
                 }
                 l++;
                 j += 2;
